@@ -2,6 +2,8 @@
 
 namespace App\Filament\Resources\Users\Schemas;
 
+use Dom\Text;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
 class UserForm
@@ -11,6 +13,16 @@ class UserForm
         return $schema
             ->components([
                 //
+                TextInput::make('name')
+                ->required()
+                ->maxLength(255),
+                TextInput::make('email')
+                ->email()
+                ->required()
+                ->maxLength(255),
+                TextInput::make('password')
+                ->password()
+                ->required()
             ]);
     }
 }
