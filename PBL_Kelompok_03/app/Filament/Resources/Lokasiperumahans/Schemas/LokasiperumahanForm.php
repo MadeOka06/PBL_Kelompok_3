@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\Lokasiperumahans\Schemas;
+namespace App\Filament\Resources\LokasiPerumahans\Schemas;
 
 use Filament\Schemas\Schema;
 
-class LokasiperumahanForm
+class LokasiPerumahanForm
 {
     public static function configure(Schema $schema): Schema
     {

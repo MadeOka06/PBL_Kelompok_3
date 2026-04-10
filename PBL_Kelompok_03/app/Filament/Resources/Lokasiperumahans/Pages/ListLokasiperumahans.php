@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\Lokasiperumahans\Pages;
+namespace App\Filament\Resources\LokasiPerumahans\Pages;
 
-use App\Filament\Resources\Lokasiperumahans\LokasiperumahanResource;
+use App\Filament\Resources\LokasiPerumahans\LokasiPerumahanResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
-class ListLokasiperumahans extends ListRecords
+class ListLokasiPerumahans extends ListRecords
 {
-    protected static string $resource = LokasiperumahanResource::class;
+    protected static string $resource = LokasiPerumahanResource::class;
 
     protected function getHeaderActions(): array
     {

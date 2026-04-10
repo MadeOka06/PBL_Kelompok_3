@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Filament\Resources\Informasiperumahans\Pages;
+namespace App\Filament\Resources\InformasiPerumahans\Pages;
 
-use App\Filament\Resources\Informasiperumahans\InformasiperumahanResource;
+use App\Filament\Resources\InformasiPerumahans\InformasiPerumahanResource;
 use Filament\Resources\Pages\CreateRecord;
 
-class CreateInformasiperumahan extends CreateRecord
+class CreateInformasiPerumahan extends CreateRecord
 {
-    protected static string $resource = InformasiperumahanResource::class;
+    protected static string $resource = InformasiPerumahanResource::class;
 }

@@ -1,22 +1,22 @@
 <?php
 
-namespace App\Filament\Resources\Informasiperumahans;
+namespace App\Filament\Resources\InformasiPerumahans;
 
-use App\Filament\Resources\Informasiperumahans\Pages\CreateInformasiperumahan;
-use App\Filament\Resources\Informasiperumahans\Pages\EditInformasiperumahan;
-use App\Filament\Resources\Informasiperumahans\Pages\ListInformasiperumahans;
-use App\Filament\Resources\Informasiperumahans\Schemas\InformasiperumahanForm;
-use App\Filament\Resources\Informasiperumahans\Tables\InformasiperumahansTable;
-use App\Models\Informasiperumahan;
+use App\Filament\Resources\InformasiPerumahans\Pages\CreateInformasiPerumahan;
+use App\Filament\Resources\InformasiPerumahans\Pages\EditInformasiPerumahan;
+use App\Filament\Resources\InformasiPerumahans\Pages\ListInformasiPerumahans;
+use App\Filament\Resources\InformasiPerumahans\Schemas\InformasiPerumahanForm;
+use App\Filament\Resources\InformasiPerumahans\Tables\InformasiPerumahansTable;
+use App\Models\InformasiPerumahan;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
-class InformasiperumahanResource extends Resource
+class InformasiPerumahanResource extends Resource
 {
-    protected static ?string $model = Informasiperumahan::class;
+    protected static ?string $model = InformasiPerumahan::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
@@ -24,12 +24,12 @@ class InformasiperumahanResource extends Resource
 
     public static function form(Schema $schema): Schema
     {
-        return InformasiperumahanForm::configure($schema);
+        return InformasiPerumahanForm::configure($schema);
     }
 
     public static function table(Table $table): Table
     {
-        return InformasiperumahansTable::configure($table);
+        return InformasiPerumahansTable::configure($table);
     }
 
     public static function getRelations(): array
@@ -42,9 +42,9 @@ class InformasiperumahanResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListInformasiperumahans::route('/'),
-            'create' => CreateInformasiperumahan::route('/create'),
-            'edit' => EditInformasiperumahan::route('/{record}/edit'),
+            'index' => ListInformasiPerumahans::route('/'),
+            'create' => CreateInformasiPerumahan::route('/create'),
+            'edit' => EditInformasiPerumahan::route('/{record}/edit'),
         ];
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Filament\Resources\Lokasiperumahans\Pages;
+namespace App\Filament\Resources\LokasiPerumahans\Pages;
 
-use App\Filament\Resources\Lokasiperumahans\LokasiperumahanResource;
+use App\Filament\Resources\LokasiPerumahans\LokasiPerumahanResource;
 use Filament\Resources\Pages\CreateRecord;
 
-class CreateLokasiperumahan extends CreateRecord
+class CreateLokasiPerumahan extends CreateRecord
 {
-    protected static string $resource = LokasiperumahanResource::class;
+    protected static string $resource = LokasiPerumahanResource::class;
 }
