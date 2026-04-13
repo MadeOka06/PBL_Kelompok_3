@@ -15,7 +15,7 @@ class PromosiForm
             ->components([
                 //
                 Select::make('LokasiPerumahan_id')
-                ->relationship('lokasiPerumahan', 'nama_perumahan')
+                ->relationship('lokasiPerumahan', ' NamaPerumahan')
                 ->required()
                 ->searchable()
                 ->preload(),
