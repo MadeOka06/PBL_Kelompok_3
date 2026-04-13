@@ -2,8 +2,9 @@
 
 namespace App\Filament\Resources\LokasiPerumahans\Schemas;
 
-use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Group;
 
 class LokasiPerumahanForm
 {
@@ -12,12 +13,17 @@ class LokasiPerumahanForm
         return $schema
             ->components([
                 //
-                TextInput::make('Nama Perumahan')
-                ->required(),
+               Group::make([ 
+                TextInput::make('nama perumahan')
+                ->required()
+                ->minlength(3),
                 TextInput::make('alamat')
-                ->required(),
+                ->required()
+                ->minlength(3),
                 TextInput::make('daerah')
-                ->required(),
+                ->required()
+                ->minlength(3)
+                ]),
             ]);
     }
 }

@@ -14,7 +14,6 @@ class LokasiPerumahansTable
         return $table
             ->columns([
                 //
-                
             ])
             ->filters([
                 //
