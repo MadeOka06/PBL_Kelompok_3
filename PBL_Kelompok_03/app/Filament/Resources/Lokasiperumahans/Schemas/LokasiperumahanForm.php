@@ -4,6 +4,8 @@ namespace App\Filament\Resources\LokasiPerumahans\Schemas;
 
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\select;
 use Filament\Schemas\Components\Group;
 
 class LokasiPerumahanForm
@@ -14,15 +16,23 @@ class LokasiPerumahanForm
             ->components([
                 //
                Group::make([ 
-                TextInput::make('nama perumahan')
+                Select::make("category_id")
+                ->relationship("category", "tipeperumahan")
+                ->preload()
+                ->searchable()
+                ->required(),
+                TextInput::make("nama perumahan")
                 ->required()
                 ->minlength(3),
-                TextInput::make('alamat')
+                TextInput::make("alamat")
                 ->required()
                 ->minlength(3),
-                TextInput::make('daerah')
+                TextInput::make("daerah")
                 ->required()
-                ->minlength(3)
+                ->minlength(3),
+                FileUpload::make("image")
+                ->disk("public")
+                ->directory("LokasiPerumahans")
                 ]),
             ]);
     }
